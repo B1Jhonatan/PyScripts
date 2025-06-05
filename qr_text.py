@@ -1,4 +1,4 @@
-#!/home/jhonatan/PyCharmMiscProject/venv/bin/python3
+#!./venv/bin/python3
 
 import qrcode
 
@@ -24,7 +24,7 @@ def main():
     name_file += texto[-2:]
 
     img = qr.make_image(fill_color="black", back_color="white")
-    img.save(f"/home/jhonatan/Imágenes/QR/qr_{name_file}.png")
+    img.save(f"/home/jhonatan/Pictures/QR/qr_{name_file}.png")
     img.show()
 
 

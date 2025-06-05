@@ -1,4 +1,4 @@
-#!/home/jhonatan/PyCharmMiscProject/venv/bin/python3
+#!./venv/bin/python3
 
 def main():
     print(" ")
