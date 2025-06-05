@@ -19,8 +19,12 @@ def main():
     qr.add_data(texto)
     qr.make(fit=True)
 
-    img = qr.make_image(fill_color="black", back_color="white")
+    name_file: str = str(len(texto))
+    name_file += texto[:2]
+    name_file += texto[-2:]
 
+    img = qr.make_image(fill_color="black", back_color="white")
+    img.save(f"/home/jhonatan/Imágenes/QR/qr_{name_file}.png")
     img.show()
 
 
