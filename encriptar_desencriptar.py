@@ -62,9 +62,9 @@ def encriptar(text):
         else:
             texto_encriptado += char  # Dejamos los caracteres no encriptables
 
-    print("  |------------------Encriptado------------------")
-    print("  |", texto_encriptado)
-    print("  |", len(texto_encriptado), "letras")
+    print("|------------------Encriptado------------------")
+    print("|", texto_encriptado)
+    print("|", len(texto_encriptado), "letras")
 
 
 def desencriptar(texto_encriptado):
@@ -86,27 +86,27 @@ def desencriptar(texto_encriptado):
 
         texto_desencriptado += par
 
-    print("  |-----------------Desncriptado-----------------")
-    print("  |", texto_desencriptado)
+    print("|-----------------Desncriptado-----------------")
+    print("|", texto_desencriptado)
 
 
-def main():
+def run():
     seguir = True
     while seguir:
         print("")
-        print("   ----------------------------------------------")
-        opcion = input("  | Que desea realizar encriptar o desencriptar: Opciones [ e / d ] ")
+        print(" ----------------------------------------------")
+        opcion = input("| Que desea realizar encriptar o desencriptar: Opciones [ e / d ] ")
         if opcion.lower() == 'e':
-            encriptar(input("  | Ingrese palabras: "))
-            print("   ----------------------------------------------")
+            encriptar(input("| Ingrese palabras: "))
+            print(" ----------------------------------------------")
         elif opcion.lower() == 'd':
-            desencriptar(input("  | Ingrese lo encriptado: \n  | "))
-            print("   ----------------------------------------------")
+            desencriptar(input("| Ingrese lo encriptado: \n| "))
+            print(" ----------------------------------------------")
         else:
-            print("   ----------------------------------------------")
+            print(" ----------------------------------------------")
             print("")
             seguir = False
 
 
 if __name__ == '__main__':
-    main()
+    run()
