@@ -3,7 +3,13 @@
 import qrcode
 
 
-def main(texto: str):
+def main():
+    print("")
+    print("   ----------------------------------------------")
+    texto = str(input("  | Ingrese el texto a convertir en QR: \n  | "))
+    print("   ----------------------------------------------")
+    print("")
+
     qr = qrcode.main.QRCode(
         version=1,
         box_size=10,
@@ -19,4 +25,4 @@ def main(texto: str):
 
 
 if __name__ == '__main__':
-    main(str(input("Ingrese el texto a convertir en QR: \n")))
+    main()
