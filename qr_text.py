@@ -1,4 +1,5 @@
 #!./venv/bin/python3
+from datetime import datetime
 
 import qrcode
 
@@ -19,12 +20,15 @@ def main():
     qr.add_data(texto)
     qr.make(fit=True)
 
+    ahora = datetime.now()
+    fecha = ahora.strftime("%y-%m-%d")
+
     name_file: str = str(len(texto))
     name_file += texto[:2]
     name_file += texto[-2:]
 
     img = qr.make_image(fill_color="black", back_color="white")
-    img.save(f"/home/jhonatan/Pictures/QR/qr_{name_file}.png")
+    img.save(f"/home/jhonatan/Pictures/QR/QR_{fecha}_{name_file}.png")
     img.show()
 
 

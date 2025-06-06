@@ -3,7 +3,7 @@
 import sqlite3 as sql
 
 rutas = {
-    'encriptado': "./z_data_base/encriptado.db"
+    'encriptado': "./data_base/encriptado.db"
 }
 
 
