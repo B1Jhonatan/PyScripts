@@ -1,15 +1,15 @@
-#!./venv/bin/python3
+#!./.venv/bin/python3
 from datetime import datetime
-
+import argparse
 import qrcode
 
 
 def main():
-    print("")
-    print("   ----------------------------------------------")
-    texto = str(input("  | Ingrese el texto a convertir en QR: \n  | "))
-    print("   ----------------------------------------------")
-    print("")
+
+    parser = argparse.ArgumentParser(description="Es mensaje de qr")
+    parser.add_argument("-m", "--mensaje", required=True, help="Mensaje a convertir en QR")
+
+    texto = str(parser.parse_args())
 
     qr = qrcode.main.QRCode(
         version=1,
@@ -17,7 +17,7 @@ def main():
         border=4
     )
 
-    qr.add_data(texto)
+    qr.add_data(str(texto))
     qr.make(fit=True)
 
     ahora = datetime.now()
