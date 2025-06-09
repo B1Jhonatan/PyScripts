@@ -1,4 +1,4 @@
-#!./venv/bin/python3
+#!./.venv/bin/python3
 
 import sqlite3 as sql
 
