@@ -41,7 +41,7 @@ def plot_grafico(array_cuotas: list[float]):
 
     plt.bar(meses, array_cuotas, width=1.0)
 
-    mes = plt.xticks(meses[::12])
+    plt.xticks(meses[::12])
 
     plt.xlabel("Meses")
     plt.ylabel("monto")
